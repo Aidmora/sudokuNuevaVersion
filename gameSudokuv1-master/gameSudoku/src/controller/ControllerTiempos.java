@@ -15,7 +15,7 @@ public class ControllerTiempos {
     private ArbolBB arbolBB;
     private List<Integer> listaTiempos;
     @FXML
-    private TextField txtPuntuaciones1;
+    private TextField puntuacion1,puntuacion2,puntuacion3,puntuacion4,puntuacion5;
 
     public ControllerTiempos (){
         inicializarRecursos();
@@ -61,18 +61,47 @@ public class ControllerTiempos {
     }
 
     private void separarYMostrarEnTextArea(List<Integer> listaTiempos) {
-
-        for (int i = 0; i < listaTiempos.size(); i++) {
-            String salida= separarTextArea(listaTiempos.get(i).toString());
-            txtPuntuaciones1.setText(salida + "\n");
+        int tamanoLista= listaTiempos.size();
+        if (tamanoLista ==1 ){
+            String salida= listaTiempos.get(0).toString() + " segundos";
+            puntuacion1.setText(salida);
+        }else if (tamanoLista==2){
+            String salida1= listaTiempos.get(0).toString() + " segundos";
+            String salida2= listaTiempos.get(1).toString()+ " segundos";
+            puntuacion1.setText(salida1 + "\n");
+            puntuacion2.setText(salida2 + "\n");
+        }else if (tamanoLista==3){
+            String salida1= listaTiempos.get(0).toString()+ " segundos";
+            String salida2= listaTiempos.get(1).toString()+ " segundos";
+            String salida3= listaTiempos.get(2).toString()+ " segundos";
+            puntuacion1.setText(salida1 + "\n");
+            puntuacion2.setText(salida2 + "\n");
+            puntuacion3.setText(salida3 + "\n");
+        }else if (tamanoLista==4){
+            String salida1= listaTiempos.get(0).toString()+ " segundos";
+            String salida2= listaTiempos.get(1).toString()+ " segundos";
+            String salida3= listaTiempos.get(2).toString()+ " segundos";
+            String salida4= listaTiempos.get(3).toString()+ " segundos";
+            puntuacion1.setText(salida1 + "\n");
+            puntuacion2.setText(salida2 + "\n");
+            puntuacion3.setText(salida3 + "\n");
+            puntuacion4.setText(salida4 + "\n");
+        }else if (tamanoLista>=5){
+            String salida1= listaTiempos.get(0).toString()+ " segundos";
+            String salida2= listaTiempos.get(1).toString()+ " segundos";
+            String salida3= listaTiempos.get(2).toString()+ " segundos";
+            String salida4= listaTiempos.get(3).toString()+ " segundos";
+            String salida5= listaTiempos.get(4).toString()+ " segundos";
+            puntuacion1.setText(salida1 + "\n");
+            puntuacion2.setText(salida2 + "\n");
+            puntuacion3.setText(salida3 + "\n");
+            puntuacion4.setText(salida4 + "\n");
+            puntuacion4.setText(salida5+ "\n");
         }
+
     }
 
-    public String separarTextArea(String tiempo){
-        String salida = tiempo + "segundos";
-        txtPuntuaciones1.setText(salida + "\n");
-        return salida;
-    }
+
 
 
 }
