@@ -1,5 +1,6 @@
 package controller;
 
+import BusinessLogic.entities.ColaSimple;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,26 +10,20 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class ControllerGameOver {
 
     @FXML
-    private Button buttonRegresar;
+    private Button buttonCerrar;
+    public ColaSimple colaSimple;
+
 
     @FXML
-    void regresarHome(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/view/homeInterface.fxml"));
-        Scene scene = new Scene(root, 740, 530);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("");
-        stage.setResizable(false);
-        stage.show();
-
-        Stage sta = (Stage) this.buttonRegresar.getScene().getWindow();
+    void cerrar(ActionEvent event) throws IOException {
+        Stage sta = (Stage) this.buttonCerrar.getScene().getWindow();
         sta.close();
     }
-
 }

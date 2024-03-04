@@ -105,7 +105,7 @@
             <AnchorPane layoutX="46.0" layoutY="464.0" prefHeight="18.0" prefWidth="290.0" style="-fx-background-color: #804000;" />
             <AnchorPane layoutX="101.0" layoutY="446.0" prefHeight="18.0" prefWidth="194.0" style="-fx-background-color: #804000;" />
             <AnchorPane layoutX="142.0" layoutY="436.0" prefHeight="18.0" prefWidth="124.0" style="-fx-background-color: #804000;" />
-            <Button fx:id="buttonPuntuaciones" layoutX="123.0" layoutY="366.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="158.0" style="-fx-background-color: #644966;" text="Puntuaciones">
+            <Button fx:id="mejoresTiempos" layoutX="123.0" layoutY="366.0" mnemonicParsing="false" onAction="#mostrarTiempos" prefHeight="50.0" prefWidth="158.0" style="-fx-background-color: #644966;" text="Tiempos">
                <font>
                   <Font name="Bodoni MT Poster Compressed" size="33.0" />
                </font>

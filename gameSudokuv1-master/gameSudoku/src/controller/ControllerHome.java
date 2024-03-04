@@ -22,6 +22,8 @@ public class ControllerHome {
     @FXML
     private Button buttonReglas;
     @FXML
+    private Button mejoresTiempos;
+    @FXML
     private TextField nombreUsuario;
 
     @FXML
@@ -88,6 +90,17 @@ public class ControllerHome {
         stage.setResizable(false);
         stage.show();
 
+    }
+    @FXML
+    void mostrarTiempos(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/view/mejoresTiempos.fxml"));
+        Scene scene = new Scene(root, 250, 399);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Register");
+        stage.setResizable(false);
+        stage.showAndWait();
     }
     public String encontrarUsuarioConectado(ColaSimple colaSimple, String nombreUsuario){
         String nombreEncontrado="";

@@ -12,7 +12,7 @@
             <Font name="Jokerman" size="36.0" />
          </font>
       </Text>
-      <Button fx:id="buttonRegresar" layoutX="283.0" layoutY="182.0" mnemonicParsing="false" onAction="#regresarHome" style="-fx-background-color: #202d3c;" text="Volver a Intentar" textFill="#fffafa" />
+      <Button fx:id="buttonCerrar" layoutX="283.0" layoutY="182.0" mnemonicParsing="false" onAction="#cerrar" style="-fx-background-color: #202d3c;" text="Cerrar el juego" textFill="#fffafa" />
       <Text layoutX="216.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>
 </AnchorPane>

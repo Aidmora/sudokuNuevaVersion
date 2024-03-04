@@ -1,5 +1,6 @@
 package controller;
 
+import BusinessLogic.entities.ColaSimple;
 import BusinessLogic.entities.NodoLs;
 import BusinessLogic.entities.SudokuGrid;
 import javafx.fxml.FXML;
@@ -12,6 +13,9 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import player.Jugador;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -2490,7 +2494,9 @@ public class SudokuController {
         }
         if(valVidas==0){
             int tiempoFinal = this.segundos;
+
             System.out.println("El tiempo total fue: " + tiempoFinal);
+            guardarRegistro("registrosTiempos.txt", tiempoFinal +","+"tiempo");
             timer.cancel();
             try {
                 lanzarInterface();
@@ -2511,6 +2517,19 @@ public class SudokuController {
         stage.setTitle("");
         stage.setResizable(false);
         stage.show();
+
+    }
+    public static void guardarRegistro(String nombreArchivo, String registro) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo, true));
+            writer.write(registro);
+            writer.newLine();
+            writer.close();
+            System.out.println("Registro guardado exitosamente en " + nombreArchivo);
+
+        } catch (IOException e) {
+            System.err.println("Error al guardar el registro: " + e.getMessage());
+        }
     }
 
 }

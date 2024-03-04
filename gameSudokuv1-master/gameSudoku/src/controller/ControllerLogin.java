@@ -29,7 +29,7 @@ public class ControllerLogin {
 
     @FXML
     private TextField txtnombreUsuario;
-    public ColaSimple colaSimple, colasimpleLogin;
+    public ColaSimple colaSimple;
 
     @FXML
     void IngresarSistema(ActionEvent event) throws IOException {
@@ -38,8 +38,9 @@ public class ControllerLogin {
         System.out.println(contrasenia+""+nombreUsuario);
         // Verificar las credenciales
         if (verificarCredenciales(nombreUsuario, contrasenia)) {
-            System.out.println("Inicio de sesión exitoso para el usuario: " + nombreUsuario);int numeroLineas= contarLineas("registrosUsuarios.txt");
-            System.out.println("El numero de lineas es: "+numeroLineas+"");
+            System.out.println("Inicio de sesión exitoso para el usuario: " + nombreUsuario);
+            int numeroLineas = contarLineas("registrosUsuarios.txt");
+            System.out.println("El numero de lineas es: " + numeroLineas + "");
             colaSimple = new ColaSimple(numeroLineas);
             insertarDatoCola(colaSimple);
             System.out.println(colaSimple.toString());
@@ -49,14 +50,8 @@ public class ControllerLogin {
             // Abre nueva ventana
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeInterface.fxml"));
             Parent root = loader.load();
-
-            // Obtener una referencia al controlador ControllerHome
             ControllerHome controllerHome = loader.getController();
-
-            // Pasar la cola simple al controlador ControllerHome
             controllerHome.setColaSimple(colaSimple, nombreUsuario);
-
-            // Configurar y mostrar la ventana
             Scene scene = new Scene(root, 740, 530);
             Stage stage = new Stage();
             stage.setScene(scene);
