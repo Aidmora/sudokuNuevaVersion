@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="488.0" prefWidth="695.0" style="-fx-background-color: #dc9d00;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerReglas">
+   <children>
+      <TextArea editable="false" layoutX="24.0" layoutY="76.0" prefHeight="236.0" prefWidth="647.0" text="&#10;1. Un tablero de Sudoku es una cuadrícula de 9x9 celdas, dividida en nueve subcuadrículas más pequeñas de 3x3 llamadas &quot;regiones&quot; o &quot;bloques&quot;.&#10;&#10;2. El objetivo del juego es llenar el tablero con números del 1 al 9, de manera que cada fila, columna y región de 3x3 contenga todos los números del 1 al 9 sin repetirse.&#10;&#10;3. Inicialmente, se proporcionan algunos números en ciertas celdas del tablero, conocidos como &quot;números dados&quot; o &quot;números prefijados&quot;. Estos números sirven como pistas y no se pueden cambiar.&#10;&#10;4. Para resolver el Sudoku, debes completar el tablero llenando las celdas vacías con los números del 1 al 9, asegurándote de que no haya repeticiones en ninguna fila, columna o región de 3x3.&#10;&#10;5. La solución a un Sudoku es única, lo que significa que solo hay una forma correcta de llenar el tablero siguiendo las reglas mencionadas anteriormente.&#10;&#10;Siguiendo estas reglas, el Sudoku se convierte en un desafío lógico y de resolución de problemas que requiere paciencia y habilidades de deducción.">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextArea>
+      <Text fill="#890000" layoutX="104.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regla basica de Sudoku">
+         <font>
+            <Font name="Jokerman" size="46.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="155.0" fitWidth="383.0" layoutX="216.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sudo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+.rounded-box {
+    -fx-background-color: #900C3F;
+    -fx-background-radius: 10;
+    -fx-border-color: #900C3F;
+    -fx-border-width: 10;
+    -fx-border-radius: 20;
+    -fx-border-style: solid;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+.grid-pane {
+    -fx-background-color: #f1bf16; /* Color de fondo */
+    -fx-border-color: #a9a9a9; /* Color del borde */
+    -fx-border-width: 2px; /* Ancho del borde */
+    -fx-border-radius: 5px; /* Radio de borde (para bordes redondeados) */
+}
+/* Estilo para TextField */
+.text-field-custom {
+    -fx-font-size: 14pt; /* Tamaño de la fuente */
+    -fx-font-family: "Eras Bold ITC"; /* Tipo de fuente */
+    -fx-text-fill: black; /* Color del texto */
+    -fx-background-color: #ffffff; /* Color de fondo */
+    -fx-border-color: #aaaaaa; /* Color del borde */
+    -fx-border-width: 0px; /* Ancho del borde */
+    -fx-border-radius: 5px; /* Radio de borde */
+}
+
+/* Estilo cuando el TextField tiene el foco */
+.text-field-custom:focused {
+    -fx-border-color: #3366ff; /* Color del borde cuando tiene el foco */
+}
+
+/* Estilo para TextField cuando está deshabilitado */
+.text-field-custom:disabled {
+    -fx-opacity: 0.5; /* Opacidad cuando está deshabilitado */
+}
+
+/* Estilo para el texto dentro del TextField */
+.text-field-custom .text {
+    -fx-font-size: 30pt; /* Tamaño de la fuente del texto */
+    -fx-font-weight: bold;
+}
