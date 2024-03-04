@@ -6,6 +6,9 @@ package BusinessLogic.entities;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author ARIEL
@@ -51,23 +54,19 @@ public class ArbolBB {
      * recorridoInorden: Esta funcion implementa a un ayudanteInorden, que ejecutara
      * el algoritmo correspondiente al recorridoInorden.
      */
-    public void recorridoInorden() {
-        ayudanteInorden(this.raiz);
+    public List<Integer> recorridoInorden() {
+        List<Integer> valoresInorden = new ArrayList<>();
+        ayudanteInorden(this.raiz, valoresInorden);
+        return valoresInorden;
     }
 
-    /**
-     * ayudanteInorden: Esta funcion permite realizar un recorrido inOrden,
-     * obteniendo los valors del arbol de manera ordenada
-     *
-     * @param nod
-     */
-    private void ayudanteInorden(Nodo2 nod) {
-        if (nod == null) {
+    private void ayudanteInorden(Nodo2 nodo, List<Integer> valores) {
+        if (nodo == null) {
             return;
         }
-        ayudanteInorden(nod.getIZQ());
-        System.out.print("[" + nod.getInfo() + "] - ");
-        ayudanteInorden(nod.getDER());
+        ayudanteInorden(nodo.getIZQ(), valores);
+        valores.add(nodo.getInfo());
+        ayudanteInorden(nodo.getDER(), valores);
     }
 
 

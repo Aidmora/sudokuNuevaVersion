@@ -23,7 +23,21 @@
                   <Font name="Jokerman" size="15.0" />
                </font>
             </Text>
-            <AnchorPane layoutX="1.0" prefHeight="36.0" prefWidth="400.0" style="-fx-background-color: #804000;" />
+            <AnchorPane layoutX="1.0" prefHeight="36.0" prefWidth="400.0" style="-fx-background-color: #804000;">
+               <children>
+                  <TextField fx:id="nombreUsuario" alignment="CENTER" editable="false" layoutX="188.0" layoutY="2.0" opacity="0.81" text="HOLA">
+                     <font>
+                        <Font name="OCR A Extended" size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect></TextField>
+                  <Text layoutX="27.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIENVENIDO">
+                     <font>
+                        <Font name="Monotype Corsiva" size="24.0" />
+                     </font>
+                  </Text>
+               </children></AnchorPane>
             <AnchorPane layoutX="19.0" layoutY="171.0" prefHeight="36.0" prefWidth="362.0" style="-fx-background-color: #804000;">
                <children>
                   <Text fill="#05094e" layoutX="92.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nivel Intermedio">
@@ -84,16 +98,7 @@
                </font>
             </Button>
             <AnchorPane layoutX="-1.0" layoutY="-8.0" prefHeight="530.0" prefWidth="30.0" style="-fx-background-color: #804000;" />
-            <AnchorPane layoutX="6.0" layoutY="-6.0" prefHeight="39.0" prefWidth="362.0" style="-fx-background-color: #804000;">
-               <children>
-                  <TextField fx:id="nombreUsuario" alignment="CENTER" editable="false" layoutX="-56.0" layoutY="4.0" opacity="0.81" text="HOLA">
-                     <font>
-                        <Font name="OCR A Extended" size="18.0" />
-                     </font>
-                     <effect>
-                        <InnerShadow />
-                     </effect></TextField>
-               </children></AnchorPane>
+            <AnchorPane layoutX="6.0" layoutY="-6.0" prefHeight="39.0" prefWidth="362.0" style="-fx-background-color: #804000;" />
             <AnchorPane layoutX="362.0" prefHeight="530.0" prefWidth="20.0" style="-fx-background-color: #804000;" />
             <AnchorPane layoutX="-365.0" layoutY="502.0" prefHeight="27.0" prefWidth="733.0" style="-fx-background-color: #804000;" />
             <Text fill="#6e0000" layoutX="70.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" wrappingWidth="212.7998962402345">

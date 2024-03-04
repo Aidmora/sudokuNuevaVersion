@@ -4,6 +4,7 @@ import BusinessLogic.entities.ColaSimple;
 import BusinessLogic.entities.Pila;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -36,6 +37,15 @@ public class ControllerRegistro {
         contrasenia = txtContrasenia.getText();
         nombreUsuario = txtNombreUsuario.getText();
         guardarRegistro("registrosUsuarios.txt",nombreUsuario+","+contrasenia);
+        if(nombre.equals("")||apellido.equals("")||nombreUsuario.equals("")||contrasenia.equals("")){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("ERROR");
+            alert.setContentText("Rellene todos los campos!!");
+            alert.showAndWait();
+        }else {
+            guardarRegistro("registrosUsuarios.txt", nombreUsuario + "," + contrasenia);
+        }
 
     }
     public static void guardarRegistro(String nombreArchivo, String registro) {
@@ -51,6 +61,11 @@ public class ControllerRegistro {
             insertarDatoCola(colaSimple);
 
         } catch (IOException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("ERROR");
+            alert.setContentText("No se puede registrar este usuario, verifique los campos e intentelo de nuevo");
+            alert.showAndWait();
             System.err.println("Error al guardar el registro: " + e.getMessage());
         }
     }
@@ -77,6 +92,11 @@ public class ControllerRegistro {
             }
         } catch (IOException e) {
             System.err.println("Error al leer el archivo de registros: " + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("ERROR");
+            alert.setContentText("No se puede registrar este usuario, verifique los campos e intentelo de nuevo");
+            alert.showAndWait();
         }
         System.out.println(colaSimple.toString()); ;
     }
